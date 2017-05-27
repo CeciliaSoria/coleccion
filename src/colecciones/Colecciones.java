@@ -5,8 +5,10 @@
  */
 package colecciones;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -37,16 +39,42 @@ public class Colecciones {
                                                   */
                     
    
-    SortedSet <Persona> persona = new TreeSet <Persona> ();
+    /*SortedSet <Persona> persona = new TreeSet <Persona> ();
         persona.add (new Persona ("Ariel", "30"));
         persona.add (new Persona ("Raul", "42"));
         persona.add (new Persona ("Baltazar", "70"));
             
     for (Persona p: persona) {
-            System.out.println(p);
+            System.out.println(p);                   
+                                                                   */
+    Map <String,Persona> personaPorDni=new HashMap <>();
     
-    
+    personaPorDni.put("10", new Persona ("10","Juan"));
+    Persona p2= new Persona ("20","Pedro");
+    personaPorDni.put (p2.getDni(),p2);
+    personaPorDni.put ("10",p2);
+    Persona x= personaPorDni.get ("20");
+
+      //Values ()
+    for (Persona p: personaPorDni.values()){
+        System.out.println (p2);
+        
+   }
+    //KeySet()
+    for (String k: personaPorDni.keySet()){
+        System.out.println (k + ":" + personaPorDni.get(k));
+     }
+    //EntrySet
+    for (Map.Entry <String,Persona> e: personaPorDni.entrySet()){
+        System.out.println(e.getKey()+ ":" + e.getValue());
     }
+    /*[para remover] (personaPorDni.remove("20")*/
+    personaPorDni.containsKey ("20");
+    personaPorDni.containsValue (p2);
+        Persona x1 = personaPorDni.getOrDefault("30", x);
+     /*[para agregar] (personaPorDniputifAbsent"40",p2);*/
+     
     
     }
 }
+
