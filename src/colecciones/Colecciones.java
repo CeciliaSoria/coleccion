@@ -8,6 +8,8 @@ package colecciones;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  *
@@ -25,20 +27,26 @@ public class Colecciones {
                 
         nombres.remove(0);
         
-        for (String: nombres);
-        System.out.println (e); */
+        for (String: nombres); */
        
-       
-     Set<Persona> personas= new HashSet <> ();
+     /*Set<Persona> personas= new HashSet <> ();
      personas.add (new Persona ("Juan","10"));
      personas.add (new Persona ("Juan","11"));
      personas.add (new Persona ("Pedro","12"));
             System.out.println(personas.size());
+                                                  */
+                    
+   
+    SortedSet <Persona> persona = new TreeSet <Persona> ();
+        persona.add (new Persona ("Ariel", "30"));
+        persona.add (new Persona ("Raul", "42"));
+        persona.add (new Persona ("Baltazar", "70"));
             
-    for (Persona p: personas) {
+    for (Persona p: persona) {
             System.out.println(p);
-    }
-        
+    
+    
     }
     
+    }
 }
